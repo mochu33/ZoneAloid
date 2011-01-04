@@ -32,10 +32,12 @@ public class LocationService extends Service{
 		this.locationListener = new ZoneAloidLocationListener();
 
 		// Register the listener with the Location Manager to receive location updates
-		this.locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, ZoneAloidLocationListener.MIN_TIME, ZoneAloidLocationListener.MIN_DISTANCE, this.locationListener);
+		this.locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, ZoneAloidLocationListener.MIN_TIME,
+				ZoneAloidLocationListener.MIN_DISTANCE, this.locationListener);
 		// Or, use GPS location data:
 		// From google doc: You can also request location updates from both the GPS and the Network Location Provider by calling requestLocationUpdates() twice
-		this.locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,ZoneAloidLocationListener.MIN_TIME, ZoneAloidLocationListener.MIN_DISTANCE, this.locationListener);
+		this.locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,ZoneAloidLocationListener.MIN_TIME,
+				ZoneAloidLocationListener.MIN_DISTANCE, this.locationListener);
 
 	}
 
